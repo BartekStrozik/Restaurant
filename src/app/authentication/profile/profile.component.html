@@ -1,0 +1,15 @@
+<div class="container">
+    <div>
+        {{ user.email }}
+        {{ user.id }}
+    </div>
+    <div *ngFor="let dish of historyDishes; index as i" class="dish-element">
+        <div class="number">{{ i+1 }}.</div>
+        <div class="name">{{ dish.name }}</div>
+        <div class="category">{{ dish.category }}</div>
+        <div class="price">{{ dish.price }}$</div>
+    </div>
+    <button type="submit" class="btn btn-danger mt-3" width="500" (click)="onSignOut()">
+        Wyloguj się
+    </button>
+</div>

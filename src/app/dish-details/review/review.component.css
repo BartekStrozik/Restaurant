@@ -1,0 +1,8 @@
+.review {
+    padding: 2%;
+    border: 1px solid black;
+}
+
+.errors {
+    color: red;
+}

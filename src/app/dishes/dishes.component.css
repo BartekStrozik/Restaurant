@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#counter {
+    min-width: 100%;
+    background-color: orange;
+    text-align: center;
+    z-index: 1;
+}

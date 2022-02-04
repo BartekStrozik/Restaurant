@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="user">
+        
+    </div>
+    <div class="logo row bg-dark">
+        <section>
+            <div class="row mt-3">
+                <h1 style="font-family: Corinthia, serif; color: white">
+                    Restauracja Wszystkie Kuchnie Świata
+                </h1>
+            </div>
+        </section>
+        <section class="p-2">
+            <div class="row">
+                <img src="assets/images/food.jpeg" alt="" width="550" height="300">
+                <img src="assets/images/logo.png" alt="" width="300" height="300">
+            </div>
+        </section>
+    </div>
+    <section class="p-4">
+        <div class="contact-data-container">
+            <div class="row">
+                <div class="col-md">
+                    <h1 class="text-center mb-4" style="font-family: Corinthia, serif">
+                        Dane kontaktowe
+                    </h1>
+                    <div class="contact-data">
+                        <div class="address">
+                            <h3>Adres</h3>
+                            <ul style="list-style: none;">
+                                <li>ul. Waryńskiego 105/29</li>
+                                <li>35-105 Kraków</li>
+                            </ul>
+                        </div>
+                        <div class="phone">
+                            <h3>Telefon</h3>
+                            <ul style="list-style: none;">
+                                <li>100 200 300</li>
+                            </ul>
+                        </div>
+                        <div class="e-mail">
+                            <h3>E-Mail</h3>
+                            <ul style="list-style: none;">
+                                <li>restauracja.wszystkich.kuchnii@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="web-page">
+                            <h3>Strona internetowa</h3>
+                            <ul style="list-style: none;">
+                                <li>www.restauracja-wszystkie-kuchnie.pl</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="map row bg-dark">
+                    <google-map class="google-map" [width]="1250" [height]="300" [options]="mapOptions">
+                        <map-marker [position]="marker.position"></map-marker>
+                    </google-map>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

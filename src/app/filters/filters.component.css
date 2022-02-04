@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8em;
+    margin: 2%;
+}
+
+.cuisines .types .prices {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    column-gap: 5%;
+}
+
+form {
+    min-width: 350px;
+}
+
+#amount {
+    max-width: 60px;
+    margin: 3%;
+}

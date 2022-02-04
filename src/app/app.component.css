@@ -1,0 +1,9 @@
+.container {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+li {
+    padding: 0;
+    color: black;
+}

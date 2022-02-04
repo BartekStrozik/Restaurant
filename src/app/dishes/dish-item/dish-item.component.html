@@ -1,0 +1,46 @@
+<div class="dish-card" width="200" height="auto">
+    <!--button type="button" class="btn btn-danger button"
+        (click)="onDelete(dish)">
+        Usuń danie
+    </button-->
+    <a routerLink="/dishes/{{dish.id}}">
+        <img src="{{ dish.representingImage }}" class="tn" width="200" height="160">
+    </a>
+    <div class="d-inline">
+        <p>{{ dish.name | uppercase }}</p>
+        <p>{{ dish.cuisine | uppercase }}</p>
+        <p>{{ dish.category }}</p>
+        <p>{{ dish.type }}</p>
+    </div>
+
+    <div class="price d-inline">{{ dish.price }}$</div>
+
+    <div class="buttons">
+        <button
+            type="button"
+            class="btn btn-danger"
+            [ngStyle] = "{'display': amount > 0 ? 'block' : 'none'}"
+            (click)="changeAmount(changeType.MINUS)">
+            -
+        </button>
+        <div 
+            *ngIf="amount > 0" 
+            class="amount1 d-inline"
+            [ngStyle] = "{'color': amount > maxAmount - 3 ? 'red' : 'black'}">
+            {{ amount }}
+        </div>
+        <div
+            *ngIf="amount == 0" 
+            class="amount2 d-inline">
+            Zamów danie!
+        </div>
+        <button
+            type="button" 
+            class="btn btn-success"
+            [ngStyle] = "{'display': amount < maxAmount ? 'block' : 'none'}"
+            (click)="changeAmount(changeType.PLUS)">
+            +
+        </button>
+    </div>
+    
+</div>

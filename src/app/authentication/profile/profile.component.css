@@ -1,0 +1,25 @@
+.dish-element {
+    display: grid;
+    grid-template-columns: 10% 50% 20% 20%;
+    border: 1px solid black;
+}
+
+.number {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.name {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.category {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.price {
+    grid-column-start: 4;
+    grid-column-end: 5;
+}

@@ -1,0 +1,21 @@
+<div id="counter" [ngStyle]="{'background-color': reservedDishes <= 10 ? 'orange' : 'lightblue'}">
+    Zarezerwoano łącznie {{ reservedDishes }} dań.
+</div>
+<app-filters
+    (selectCuisine)="cuisineFilterBy($event)"
+    (selectType)="typeFilterBy($event)"
+    (priceMinMax)="pricesFilterBy($event)">
+</app-filters>
+<div class="row">
+    <app-dish-item
+        *ngFor="let dish of dishes | cuisinePipe:cuisineFilter | typePipe:typeFilter 
+        | priceminPipe:priceMinFilter | pricemaxPipe:priceMaxFilter
+        | paginate: { itemsPerPage: 8, currentPage: p }"
+        [dish]="dish"
+        (reserveDish)="changeAmount($event)"
+        class="col-lg-3 col-sm-6">
+    </app-dish-item>
+    <div class="p-5 justify-content-center">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</div>

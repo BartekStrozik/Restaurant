@@ -1,0 +1,52 @@
+<form [formGroup]="dishForm" class="form">
+    <div class="form-group">
+        <label for="name" class="label">Nazwa potrawy</label>
+        <input type="text" name="name" formControlName="name" class="form-control">
+
+        <label for="cuisine" class="label">Kuchnia</label>
+        <input type="text" name="cuisine" formControlName="cuisine" class="form-control">
+
+        <label for="category" class="label">Kategoria</label>
+        <input type="text" name="category" formControlName="category" class="form-control">
+
+        <label for="type" class="label">Które danie</label>
+        <input type="text" name="type" formControlName="type" class="form-control">
+
+        <div formArrayName="ingredients" class="ingredients">
+            <label for="ingredients">List składników</label>&nbsp;
+            <button type="button" class="add-ingredient" (click)="addIngredient()"><span>Dodaj składnik</span></button>
+            <div *ngFor="let ingredient of getIngredientsControls();let i = index" class="ingredient">
+                <input type="text" name="ingredient" [formControlName]="i" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="amountOfDishes" class="label">Liczba dostępnych dań</label>
+        <input type="text" name="amountOfDishes" formControlName="amountOfDishes" class="form-control">
+
+        <label for="price" class="label">Cena w $</label>
+        <input type="number" id="amount" class="form-control" formControlName="price">
+
+        <label for="description" class="label">Opis</label>
+        <input type="text" name="description" formControlName="description" class="form-control">
+        
+        <!--label for="image">Zdjęcie</label>
+        <input type="file" name="image" (change)="onFileSelected($event)"-->
+
+        <label for="representing-image" class="label">URL zdjęcia głównego</label>
+        <input type="text" name="representing-image" formControlName="representingImage" class="form-control">
+
+        <div formArrayName="images" class="images">
+            <label for="images">Lista URL zdjęć</label>&nbsp;
+            <button type="button" class="add-image" (click)="addImage()"><span>Dodaj zdjęcie</span></button>
+            <div *ngFor="let ingredient of getImagesControls();let j = index" class="image">
+                <input type="text" name="image" [formControlName]="j" class="form-control">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success" (click)="onSubmit()">
+            Dodaj nową potrawę
+        </button>
+    </div>
+    
+</form>

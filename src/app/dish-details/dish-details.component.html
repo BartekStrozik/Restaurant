@@ -1,0 +1,45 @@
+<div class="header">
+    <h1 style="text-align: center;"><strong>{{ dish.name | uppercase }}</strong></h1>
+</div>
+<div class="container">
+    <section id="picture" class="p-5">
+        <div class="row text-center">
+            <div *ngFor="let image of images" class="col-md">
+                <img src="{{ image.src }}" alt="" width="400" height="266">
+            </div>
+        </div>
+    </section>
+
+    <section id="content" class="p-5">
+        <p style="text-align: center;"><strong>Cena: </strong>{{ dish.price }}$</p>
+        <h4><strong>OPIS</strong></h4>
+        <p>{{ dish.description }}</p>
+        <p><strong>Kategoria dania: </strong>{{ dish.category }}</p>
+        <p><strong>Typ dania: </strong>{{ dish.type }}</p>
+    </section>
+
+    <section id="reservation" class="p-5">
+        <span class="m-5"><strong>Zamów danie:</strong></span>
+        <button type="button" class="btn btn-danger" (click)="changeAmount(changeType.MINUS)">
+            -
+        </button>
+        <div class="amount ml-2 mr-2">
+            {{ amount }}
+        </div>
+        <button type="button" class="btn btn-success" (click)="changeAmount(changeType.PLUS)">
+            +
+        </button>
+    </section>
+
+    <section id="review" class="p-3">
+        <h1 style="text-align: center;"><strong>RECENZJE</strong></h1>
+        <app-review></app-review>
+    </section>
+
+    <section id="remove-button">
+        <button type="button" class="btn btn-danger button" (click)="onDelete(dish.id)">
+            Usuń danie
+        </button>
+    </section>
+
+</div>

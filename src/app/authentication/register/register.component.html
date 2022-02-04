@@ -1,0 +1,17 @@
+<div class="container">
+    <form [formGroup]="signUpForm">
+        <div class="form-group">
+            <label for="email" class="label">E-Mail</label>
+            <input type="text" name="email" formControlName="email" class="form-control">
+    
+            <label for="password" class="label">Hasło</label>
+            <input type="text" name="password" formControlName="password" class="form-control">
+    
+            <button type="submit" class="btn btn-success mt-3" width="500" (click)="onSignUp()">
+                Zarejestruj się
+            </button>
+        </div>
+    </form>
+</div>
+
+

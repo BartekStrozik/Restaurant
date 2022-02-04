@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "restauracja-319af": {
+      "hosting": {
+        "restauracja": [
+          "restauracja-319af"
+        ]
+      }
+    },
+    "restaurant-5f05b": {
+      "hosting": {
+        "restauracja": [
+          "restaurant-5f05b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "restaurant-5f05b"
+  }
+}

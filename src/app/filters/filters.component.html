@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="cuisines">
+        <div class="row">
+            <input type="checkbox" id="italian-cuisine" (change)="italianCuisineChange()">
+            &nbsp;
+            <label for="italian-cuisine">Kuchnia włoska</label>
+        </div>
+        <div class="row">
+            <input type="checkbox" id="chinese-cuisine" (change)="chineseCuisineChange()">
+            &nbsp;
+            <label for="chinese-cuisine">Kuchnia chińska</label>
+        </div>
+        <div class="row">
+            <input type="checkbox" id="polish-cuisine" (change)="polishCuisineChange()">
+            &nbsp;
+            <label for="polish-cuisine">Kuchnia polska</label>
+        </div>
+        <div class="row">
+            <input type="checkbox" id="greek-cuisine" (change)="greekCuisineChange()">
+            &nbsp;
+            <label for="greek-cuisine">Kuchnia grecka</label>
+        </div>
+        <div class="row">
+            <input type="checkbox" id="french-cuisine" (change)="frenchCuisineChange()">
+            &nbsp;
+            <label for="french-cuisine">Kuchnia francuska</label>
+        </div>
+    </div>
+    <div class="types">
+        <div class="row">
+            <input type="checkbox" id="main-type" (change)="mainTypeChange()">
+            &nbsp;
+            <label for="main-type">Danie główne</label>
+        </div>
+        <div class="row">
+            <input type="checkbox" id="soup-type" (change)="soupTypeChange()">
+            &nbsp;
+            <label for="soup-type">Zupa</label>
+        </div>
+        <div class="row">
+            <input type="checkbox" id="main-course-type" (change)="mainCourseTypeChange()">
+            &nbsp;
+            <label for="main-course-type">Drugie danie</label>
+        </div>
+    </div>
+    <div class="prices">
+        <form [formGroup]="pricesForm" (ngSubmit)="onSubmit()">
+            <label for="price" class="label">Cena od</label>
+            <input type="number" id="amount" formControlName="priceMin">
+
+            <label for="price" class="label">Cena do</label>
+            <input type="number" id="amount" formControlName="priceMax">
+            
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+                Filtruj po cenach
+            </button>
+        </form>
+    </div>
+</div>
