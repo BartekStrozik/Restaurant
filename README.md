@@ -1,27 +1,43 @@
-# Restauracja
+# Restaurant
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+Project is web application which offers dishes - example of restaurant page.
 
-## Development server
+## Inside applications there are 7 views:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Main page
+Restaurant name, contact data, pictures and location on map
 
-## Code scaffolding
+## DISHES OFFER
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Menu
+Filters implemented with pipes. We can search dishes by cuisine or category.
 
-## Build
+Collection of dishes. Each dish contains data:
+-dish name
+-cusisine
+-wheter dish is for dinner, dish is soup or dish is dessert
+-price
+-amount of dishes in restaurant
+etc.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Add dish
+Form of new dish with same properies as above.
 
-## Running unit tests
+## Cart
+Summary of reserving dishes in application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## AUTHENTICATION
 
-## Running end-to-end tests
+## Profile page
+Profile name and some other user data.
+History of reserved and bought dishes
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Login page
+Implements authentication. User data is stored in database.
 
-## Further help
+## Register page
+Implements saving new user in database.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Project is made in Polish language and project code is in English.
+
+Project was generated with [Angular CLI] version 13.0.3.
